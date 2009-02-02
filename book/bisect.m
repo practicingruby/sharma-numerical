@@ -1,6 +1,6 @@
 function [c,err,yc] = bisect(f, a, b, delta)
 
-% Bisection Method
+% Bisection Method (p.59)
 %   To approximate the root of the equation f(x) = 0 in the interval [a,b].
 %   Use this method only if f(x) is continuous and f(a) and f(b) have
 %   opposite signs.
@@ -17,10 +17,11 @@ function [c,err,yc] = bisect(f, a, b, delta)
 % 
 % USAGE:
 %  Via an inline function:
-%  [c,yc,err] = bisect(@(x) x*sin(x) - 1, 0, 2, 0.001)
+%   f = @(x) x * sin(x) - 1
+%   [c,yc,err] = bisect(f, 0, 2, 0.001)
 %
 %  Via an mfile (example.m):
-%  [c,yc,err = bisect(@example, 0, 2, 0.0001)
+%    [c,yc,err = bisect(@example, 0, 2, 0.0001)
 %
 %  NOTE:
 %  If f(a)*f(b) is positive, function will raise an error and exit.
