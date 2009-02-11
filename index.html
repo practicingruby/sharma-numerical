@@ -1,1 +1,102 @@
-My Github Page
+<html>
+<body>
+<h2>MATLAB Scripts for Dr. Sharma's Numerical Analysis Course</h2>
+
+<p>
+Our text book provides a set of <a
+  href="http://math.fullerton.edu/mathews/software/software.html">functions and
+  scripts</a> for various numerical
+methods.  However, since the book is primarily a mathematical text it does not
+go into much detail as to how to use these functions.  Additionally, this book
+was written in 2004, so there are occasional issues with the scripts when
+running on newer versions of MATLAB.  I am providing some modified files to help
+with both of these issues.
+</p>
+
+<p>
+The functions I am providing have been tested on Matlab 2006a, as well as the
+free alternative GNU Octave.  I do not have a copy of later versions of MATLAB,
+but will try to fix issues on those systems if they arise.</p>
+
+<p>If you would like to use my scripts, for some improved documentation and
+updated code, you can download them as a  <a
+  href="http://github.com/sandal/sharma-numerical/zipball/master">zip
+  file</a></p>
+
+<h3>Installation</h3>
+
+<p>
+Unzip the file using whatever works for you on your system.  It will have a
+hideous foldder name because it is auto-generated from an exact version of the code I'm
+running on my machine.  You might want to rename this folder 'sharma-numerical'
+or something similar.</p>
+
+<p>
+Inside, you will find a README.txt, read that before you go on.   Then, what you
+will want to do is add the sharma-numerical/book folder to your MATLAB path.  If
+you have downloaded the scripts from the book's website or have an earlier copy
+of my code, be sure to either remove the path for those, or remove the
+individual scripts so that you don't have two functions with the same name
+loaded.  If this all sounds greek to you, take a look at the <a
+  href="http://www.mathworks.com/access/helpdesk/help/techdoc/matlab_env/f10-26235.html#f10-40176">Set
+  Path</a> documentation.  what you just did is tell MATLAB where to find the
+M-files you'll be using.  Now test to make sure that everything is set up
+right.</p>
+
+<h3>Using the functions</h3>
+
+<p>I take advantage of MATLAB's help function to provide good documentation.  If
+all goes well, you should be able to do something like this on your console:</p>
+
+<pre>
+>> help bisect
+Bisection Method (p.59)
+  To approximate the root of the equation f(x) = 0 in the interval [a,b].
+  Use this method only if f(x) is continuous and f(a) and f(b) have
+  opposite signs.
+
+FUNCTION SIGNATURE: [c,yc,err] = bisect(f,a,b,delta)
+ 
+  input  - f is an inline function or reference to an mfile
+         - a and b are the left and right endpoints
+         - delta is the tolerance
+
+  output - c is the zero
+         - yc = f(c)
+         - err is error est. for c
+
+USAGE:
+ Via an inline function:
+  f = @(x) x * sin(x) - 1
+  [c,yc,err] = bisect(f, 0, 2, 0.001)
+
+ Via an mfile (example.m):
+   [c,yc,err = bisect(@example, 0, 2, 0.0001)
+
+ NOTE:
+ If f(a)*f(b) is positive, function will raise an error and exit.
+</pre>
+
+<p>Doesn't that look nicer than what the book has to offer?</p>
+
+<p>Every program we're assigned to work with in class will be added to this
+package at least a few days before we need to use it.   That means that you will
+need to re-download it to get the latest versions, but that you can be sure that
+they'll be available by the time you need them. If you want to keep track of the
+latest changes, have a look at the <a
+  href="http://github.com/sandal/sharma-numerical/commits/master">project
+  timeline</a>.</p>
+
+<h3>Disclaimer / Contact</h3>
+
+<p>I don't make any guarentees that this stuff is without bugs or mistakes.  I'll
+be using it for my course work, and thought it might be of value to others to
+provide some updated scripts with better docs than what is found in the book.
+But if these things go terribly wrong and eat your computer or make you fail an
+exam, don't come hunting me down.</p>
+
+<p>That having been said, if you think you've run into problems, email me.  While I
+don't have the time or expertise to troubleshoot general MATLAB problems, I'll
+happily fix any issues that come up with these scripts.</p>
+
+Enjoy!  (gregory.t.brown at gmail.com)
